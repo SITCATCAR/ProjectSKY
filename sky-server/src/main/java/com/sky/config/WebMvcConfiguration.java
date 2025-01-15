@@ -72,7 +72,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     }
 
     /**
-     * 扩展消息转换器
+     * 扩展消息转换器 让返回的localdatetime序列化
      * @param converters
      */
     @Override
