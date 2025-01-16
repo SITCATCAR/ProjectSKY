@@ -28,4 +28,16 @@ public interface EmployeeService {
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
     void startOrStop(Integer status, Long id);
+
+    /**
+     * Id查询员工
+     * @return
+     */
+    Employee getById(Long id);
+
+    /**
+     * 修改员工
+     * @param employeeDTO
+     */
+    void update(EmployeeDTO employeeDTO);
 }
