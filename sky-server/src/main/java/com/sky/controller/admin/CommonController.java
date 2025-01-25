@@ -50,12 +50,5 @@ public class CommonController {
         return Result.error(MessageConstant.UPLOAD_FAILED);
     }
 
-    @PostMapping()
-    @ApiOperation("新增菜品")
-    public Result save(DishDTO dto){
-        log.info("新增菜品 {}",dto);
-
-        return null;
-    }
 
 }
