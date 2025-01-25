@@ -1,7 +1,9 @@
 package com.sky.controller.admin;
 
 import com.sky.constant.MessageConstant;
+import com.sky.dto.DishDTO;
 import com.sky.result.Result;
+import com.sky.service.DishService;
 import com.sky.utils.AliOssUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,6 +26,9 @@ public class CommonController {
     @Autowired
     AliOssUtil aliOssUtil;
 
+    @Autowired
+    DishService dishService;
+
     @PostMapping("/upload")
     @ApiOperation("文件上传")
     public Result<String> upload(MultipartFile file){
@@ -44,4 +49,13 @@ public class CommonController {
 
         return Result.error(MessageConstant.UPLOAD_FAILED);
     }
+
+    @PostMapping()
+    @ApiOperation("新增菜品")
+    public Result save(DishDTO dto){
+        log.info("新增菜品 {}",dto);
+
+        return null;
+    }
+
 }
